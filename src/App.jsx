@@ -1,11 +1,11 @@
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import Nummer from "./components/Nummer";
 import Menu from "./components/Menu/";
 import Tujd from "./components/Tujd";
 function App() {
   return (
-    <BrowserRouter basename="/React-training-numbers-and-time-in-Dutch/">
+    <Router>
       <div className="App">
         <Routes>
           <Route index path="/" element={<Menu />} />
@@ -13,7 +13,7 @@ function App() {
           <Route path="/tujd" element={<Tujd />} />
         </Routes>
       </div>
-    </BrowserRouter>
+    </Router>
   );
 }
 
