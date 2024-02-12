@@ -1,0 +1,25 @@
+body {
+  height: 100%;
+  background-color: #19191b;
+  overflow: hidden;
+}
+/* Для Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Для Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.no-arrows::-webkit-outer-spin-button,
+.no-arrows::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.no-arrows {
+  -moz-appearance: textfield;
+}
