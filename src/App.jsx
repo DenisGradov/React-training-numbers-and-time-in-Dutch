@@ -5,7 +5,7 @@ import Menu from "./components/Menu/";
 import Tujd from "./components/Tujd";
 function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/React-training-numbers-and-time-in-Dutch/">
       <div className="App">
         <Routes>
           <Route index path="/" element={<Menu />} />
