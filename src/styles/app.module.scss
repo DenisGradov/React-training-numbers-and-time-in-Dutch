@@ -105,7 +105,7 @@
   justify-content: center;
   background-color: #ffddb0;
   width: 290px;
-  height: 290px;
+  height: 390px;
   &Value {
     text-align: center;
     color: #5d04b0;
@@ -128,7 +128,7 @@
   justify-content: center;
   background-color: #ffddb0;
   width: 290px;
-  height: 290px;
+  height: 390px;
   &Value {
     text-align: center;
     color: #5d04b0;
@@ -385,4 +385,8 @@ input[type="checkbox"]:checked {
 
 .numberCardValueBack {
   background-color: #ffddb0;
+}
+
+.textTime {
+  margin-top: 20px;
 }

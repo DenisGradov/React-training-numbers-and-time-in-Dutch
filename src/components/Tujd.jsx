@@ -21,12 +21,38 @@ const Tujd = () => {
     setTime({ Hour, Minute });
   };
   function describeTimeInDutch(time) {
-    let hours = time.Hour;
+    let hours = time.Hour % 12; // Приводим часы к 12-часовому формату
     let minutes = time.Minute;
     let description = "";
+    let timeOfDay = ""; // Для времени суток
 
-    if (minutes === 0) {
-      description = `${hours} uur`;
+    // Определяем время суток
+    if (time.Hour < 6) {
+      timeOfDay = "'s nachts";
+    } else if (time.Hour < 12) {
+      timeOfDay = "'s morgens";
+    } else if (time.Hour < 18) {
+      timeOfDay = "'s middags";
+    } else {
+      timeOfDay = "'s avonds";
+    }
+
+    // Специальные случаи для полуночи и полудня
+    if (time.Hour === 0 && minutes === 0) {
+      return "middernacht";
+    } else if (time.Hour === 12 && minutes === 0) {
+      return "middag";
+    }
+
+    // Обработка минут близких к 30
+    if (minutes > 15 && minutes < 45 && Math.abs(minutes - 30) < 15) {
+      if (minutes < 30) {
+        description = `${30 - minutes} voor half ${hours + 1}`;
+      } else {
+        description = `${minutes - 30} over half ${hours + 1}`;
+      }
+    } else if (minutes === 0) {
+      description = `${hours === 0 ? 12 : hours} uur`;
     } else if (minutes === 15) {
       description = `kwart over ${hours}`;
     } else if (minutes === 30) {
@@ -36,19 +62,13 @@ const Tujd = () => {
     } else if (minutes < 30) {
       description = `${minutes} over ${hours}`;
     } else {
-      // Коррекция для отображения правильного часа после половины
-      let adjustedHour = (hours % 12) + 1; // Учитываем 12-часовой формат и добавляем 1 для "voor"
-      description = `${60 - minutes} voor ${adjustedHour}`;
+      description = `${60 - minutes} voor ${hours + 1}`;
     }
 
-    // Специальные случаи
-    if (hours === 0 && minutes === 0) {
-      description = "middernacht";
-    } else if (hours === 12 && minutes === 0) {
-      description = "middag";
-    }
+    // Корректируем вывод для 12-часового формата
+    hours = hours === 0 ? 12 : hours;
 
-    return description;
+    return `${description}\n${timeOfDay}`.trim();
   }
 
   return (
@@ -206,7 +226,7 @@ const Tujd = () => {
             ) : (
               ""
             )}
-            <div>{describeTimeInDutch(time)}</div>
+            <div className={styles.textTime}>{describeTimeInDutch(time)}</div>
           </div>
         </div>
       </div>
