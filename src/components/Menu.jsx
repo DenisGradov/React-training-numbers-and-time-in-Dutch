@@ -9,7 +9,7 @@ function Menu() {
         <Link to="/nummer" className={styles.buttonsBlockBox}>
           <h2 className={styles.buttonsBlockBoxText}>Nummers</h2>
         </Link>
-        <Link to="/tujd" className={styles.buttonsBlockBox}>
+        <Link to="/Tijd" className={styles.buttonsBlockBox}>
           <h2 className={styles.buttonsBlockBoxText}>Tijd</h2>
         </Link>
         <Link to="/tijden" className={styles.buttonsBlockBox}>
