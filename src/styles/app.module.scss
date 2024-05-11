@@ -169,6 +169,7 @@
   backface-visibility: hidden;
   position: absolute;
   width: 100%;
+  width: 2000px;
   height: 100%;
   display: flex;
   justify-content: center;
@@ -187,7 +188,7 @@
   transform: rotateY(180deg);
 }
 .numberCard {
-  width: 200px; /* Или другая фиксированная ширина */
+  width: 90vw; /* Или другая фиксированная ширина */
   height: 290px; /* Или другая фиксированная высота */
 
   &ValueBack {
@@ -371,6 +372,7 @@ input[type="checkbox"]:checked {
 }
 
 .digital {
+  max-width: 80vw;
   font-weight: bold;
 }
 .numberCardFlex {

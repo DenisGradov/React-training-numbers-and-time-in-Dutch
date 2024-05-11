@@ -1,0 +1,37 @@
+# Зависимости
+/node_modules/
+**/node_modules/
+
+**/tt
+tt
+
+
+# Каталоги сборки
+/build/
+/dist/
+
+# Отчеты о покрытии кода
+/coverage/
+
+node_modules/
+back/node_modules/
+front/node_modules/
+package-lock.json
+back/package-lock.json
+front/package-lock.json
+/back/dataBase/mydatabase.db
+
+
+# Лок файлы
+package-lock.json
+yarn.lock
+# Логи
+*.log
+
+# Кэш
+.cache/
+
+# Редакторы и IDE
+.idea/
+*.sublime-*
+.vscode/
