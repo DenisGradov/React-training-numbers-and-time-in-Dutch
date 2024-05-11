@@ -12,6 +12,9 @@ function Menu() {
         <Link to="/tujd" className={styles.buttonsBlockBox}>
           <h2 className={styles.buttonsBlockBoxText}>Tijd</h2>
         </Link>
+        <Link to="/tijden" className={styles.buttonsBlockBox}>
+          <h2 className={styles.buttonsBlockBoxText}>Tijden</h2>
+        </Link>
       </div>
     </div>
   );
