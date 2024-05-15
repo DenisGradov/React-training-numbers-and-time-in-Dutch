@@ -1090,13 +1090,13 @@ const sentenceExamples3 = [
 
 const sentenceExamples4 = [
   // Возьму ванну
-  { ua: "Я візьму ванну", nl: "Ik ga een bad nemen" },
-  { ua: "Ти візьмеш ванну", nl: "Jij gaat een bad nemen" },
-  { ua: "Він візьме ванну", nl: "Hij gaat een bad nemen" },
-  { ua: "Вона візьме ванну", nl: "Zij gaat een bad nemen" },
-  { ua: "Ми візьмемо ванну", nl: "Wij gaan een bad nemen" },
-  { ua: "Ви візьмете ванну", nl: "Jullie gaan een bad nemen" },
-  { ua: "Вони візьмуть ванну", nl: "Zij gaan een bad nemen" },
+  { ua: "Я прийму ванну", nl: "Ik ga een bad nemen" },
+  { ua: "Ти приймеш ванну", nl: "Jij gaat een bad nemen" },
+  { ua: "Він прийме ванну", nl: "Hij gaat een bad nemen" },
+  { ua: "Вона прийме ванну", nl: "Zij gaat een bad nemen" },
+  { ua: "Ми приймемо ванну", nl: "Wij gaan een bad nemen" },
+  { ua: "Ви приймете ванну", nl: "Jullie gaan een bad nemen" },
+  { ua: "Вони приймуть ванну", nl: "Zij gaan een bad nemen" },
 
   // Прочитаю газету
   { ua: "Я прочитаю газету", nl: "Ik ga de krant lezen" },
