@@ -5,6 +5,8 @@ import Menu from "./components/Menu/";
 import Tijd from "./components/Tijd";
 import Tijden from "./components/Tijden";
 import NietNormalWerkworden from "./components/NietNormalWerkworden";
+import NietNormalWerkwordenVTT from "./components/NietNormalWerkwordenVTT.jsx";
+import NietNormalWerkwordenOVT from "./components/NietNormalWerkwordenOVT.jsx";
 function App() {
   return (
     <Router>
@@ -17,6 +19,14 @@ function App() {
           <Route
             path="/NietNormalWerkworden"
             element={<NietNormalWerkworden />}
+          />
+          <Route
+            path="/NietNormalWerkwordenVTT"
+            element={<NietNormalWerkwordenVTT />}
+          />
+          <Route
+            path="/NietNormalWerkwordenOVT"
+            element={<NietNormalWerkwordenOVT />}
           />
         </Routes>
       </div>
